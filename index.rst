@@ -17,5 +17,6 @@ Contents:
    :maxdepth: 2
 
    intro
+   checkout
    inbound_shipments
 
