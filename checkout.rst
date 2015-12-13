@@ -65,3 +65,9 @@ At that time, your e-commerce platform should do at least two things:
 
  * Save the Logitrail's order ID to your system (given in ``success.order_id``)
  * Add amount given in ``success.delivery_fee`` to the customer's payable amount
+ 
+Examples
+========
+
+Working examples are available in GitHub `PHP Integration Examples repository
+<https://github.com/logitrail/php-integration-examples>`_.
