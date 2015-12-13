@@ -31,12 +31,13 @@ The checkout page should include our client-side JavaScript library in the ``<he
 
 .. code-block:: html
 
-    <script src="https://raw.githubusercontent.com/logitrail/javascript-library/master/src/logitrail.js"></script>
+    <script src="https://rawgit.com/logitrail/javascript-library/master/src/logitrail.js"></script>
     
 .. warning::
 
-    The library URL above points to the development version of the library in Logitrail's GitHub repository. Changes
-    are possible and the library might be occassionally in unstable state.
+    The library URL above points to the development version of the library in
+    Logitrail's GitHub repository, served via `RawGit <https://rawgit.com/>`_.
+    Changes are possible and the library might be occassionally in unstable state.
 
 When it's time to pass the order details to Logitrail and allow the customer to make his/her delivery method
 and pickup point selections, you should further do a couple more JavaScript calls with our library.
