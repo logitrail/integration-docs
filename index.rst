@@ -19,4 +19,6 @@ Contents:
    intro
    checkout
    inbound_shipments
+   products
+   product_inventory
 
