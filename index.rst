@@ -17,8 +17,10 @@ Contents:
    :maxdepth: 2
 
    intro
+   test_environment
    checkout
    inbound_shipments
+   pickup_points
    products
    product_inventory
 

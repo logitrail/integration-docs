@@ -15,6 +15,12 @@ There are two parallel and redundant endpoints for API operations:
 The date-like part in the URL is the API version. New and backwards incompatible operations
 or endpoints will update also the version.
 
+Test Environment
+================
+
+Logitrail provides a separate test environment to support the integration work.
+See :doc:`test_environment` for detailed information.
+
 Authentication
 ==============
 
