@@ -10,5 +10,7 @@ day of the expected arrival date.
 
    inbound_shipments/create_or_modify
    inbound_shipments/get
+   inbound_shipments/statuses
+   inbound_shipments/problem
    inbound_shipments/delete
    inbound_shipments/examples
