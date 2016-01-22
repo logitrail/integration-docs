@@ -25,13 +25,13 @@ saved by the merchant for possible updates.
         {
           "merchants_id": "13248",
           "name": "Puhdas+ Caps Saccharomyces boulardii, 60 kaps",
-          "gtin": "6430050001025"
+          "gtin": "6430050001025",
           "qty": 6
         },
         {
           "merchants_id": "18504",
           "name": "Puhdas+ Caps Kollageeni & Biotiini kampanjapakkaus",
-          "gtin": "6430050001766"
+          "gtin": "6430050001766",
           "qty": 6
         },
       ]
