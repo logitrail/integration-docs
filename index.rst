@@ -23,4 +23,5 @@ Contents:
    pickup_points
    products
    product_inventory
+   webhooks
 
