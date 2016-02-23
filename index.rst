@@ -20,6 +20,7 @@ Contents:
    test_environment
    checkout
    inbound_shipments
+   orders
    pickup_points
    products
    product_inventory

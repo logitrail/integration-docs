@@ -61,12 +61,24 @@ and pickup point selections, you should further do a couple more JavaScript call
 defined in ``containerId`` parameter. In practice, the browser does a HTTP GET request to the ``bridgeUrl``
 which in turn forwards the browser to Logitrail's checkout service.
 
-When the customer completes the delivery selections, given ``success`` callback function is called.
+When the customer completes the delivery selections, the given ``success`` callback function is called.
 At that time, your e-commerce platform should do at least two things:
 
  * Save the Logitrail's order ID to your system (given in ``success.order_id``)
  * Add amount given in ``success.delivery_fee`` to the customer's payable amount
+ * ... forward customer to pay the order
  
+Confirming the Order
+====================
+
+Note that an order submitted via our checkout integration is created as ``passive``. After you have
+received customer's payment, you should separately **confirm** the order.
+
+Order can be confirmed via two ways:
+
+ * HTTP Redirect to Logitrail Checkout service
+ * API Call (see :doc:`orders/confirm`)
+
 Examples
 ========
 
