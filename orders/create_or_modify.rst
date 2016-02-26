@@ -73,15 +73,17 @@ Product Details
 Each product in the order should be provided in an array of objects in
 ``products`` or ``products_all`` properties.
 
-+------------------+----------------------------------------------------------------------+
-| ``name``         | Name of the product                                                  |
-+------------------+----------------------------------------------------------------------+
-| ``merchants_id`` | Merchant's ID of the product.                                        |
-+------------------+----------------------------------------------------------------------+
-| ``gtin``         | EAN (GTIN) barcode of the product.                                   |
-+------------------+----------------------------------------------------------------------+
-| ``qty``          | Quantity of the product items expected to arrive in the shipment.    |
-+------------------+----------------------------------------------------------------------+
++--------------------+----------------------------------------------------------------------+
+| ``name``           | Name of the product                                                  |
++--------------------+----------------------------------------------------------------------+
+| ``merchants_id``   | Merchant's ID of the product.                                        |
++--------------------+----------------------------------------------------------------------+
+| ``gtin``           | EAN (GTIN) barcode of the product.                                   |
++--------------------+----------------------------------------------------------------------+
+| ``qty``            | Quantity of the product items expected to arrive in the shipment.    |
++--------------------+----------------------------------------------------------------------+
+| ``fulfillment_by`` | Possible values are ``merchant`` and ``logitrail`` (default).        |
++--------------------+----------------------------------------------------------------------+
 
 Note that existing properties are used to update the product database. You may skip ``name`` and ``ean``
 properties if you are sure that a product with ``merchants_id`` already exists in the database. See

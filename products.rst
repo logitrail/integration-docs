@@ -32,6 +32,9 @@ should be used.
 |                         | the subproduct details are given in this subdocument          |
 |                         | as an array.                                                  |
 +-------------------------+---------------------------------------------------------------+
+| ``fulfillment_by``      | The party who is responsible for fulfilling the orders.       |
+|                         | Possible values are ``merchant`` and ``logitrail`` (default). |
++-------------------------+---------------------------------------------------------------+
 
 Subproducts
 -----------
