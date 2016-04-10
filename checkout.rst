@@ -67,6 +67,54 @@ At that time, your e-commerce platform should do at least two things:
  * Save the Logitrail's order ID to your system (given in ``success.order_id``)
  * Add amount given in ``success.delivery_fee`` to the customer's payable amount
  * ... forward customer to pay the order
+
+Success callback properties
+---------------------------
+
+Logitrail JS API provides a couple of properties back to the success callback. The first and only
+argument is a JS object with following properties.
+
++--------------------+-------------------------------------------------------------+
+| ``order_id``       | The Logitrail's Order ID                                    |
++--------------------+-------------------------------------------------------------+
+| ``delivery_fee``   | The delivery fee of the selected payment method and pickup  |
+|                    | point, as defined in the merchant's profile in Logitrail.   |
+|                    | Note that it's not mandatory to set delivery fee prices     |
+|                    | in Logitrail and the merchant may override this.            |
++--------------------+-------------------------------------------------------------+
+| ``delivery_info``  | An object describing the selected delivery method, see      |
+|                    | "Delivery Info" below.                                      |
++--------------------+-------------------------------------------------------------+
+
+Delivery Info
+-------------
+
+The Checkout JS API provides also further delivery selection details in ``success.delivery_info``
+property.
+
++--------------------+-------------------------------------------------------------+
+| ``type``           | The delivery type: ``pickup``, ``home`` or ``letter``       |
++--------------------+-------------------------------------------------------------+
+| ``pickup_point``   | Optional object describing the selected pickup point.       |
++--------------------+-------------------------------------------------------------+
+| ``.title``         | Pickup point's name                                         |
++--------------------+-------------------------------------------------------------+
+| ``.address``       | Pickup point's address (in one line)                        |
++--------------------+-------------------------------------------------------------+
+| ``.info``          | Pickup point info, like business hours or location.         |
++--------------------+-------------------------------------------------------------+
+| ``.carrier``       | Carrier that serves the selected pickup point.              |
+|                    | Possible values: ``fi_posti``, ``fi_matkahuolto`` or        |
+|                    | ``fi_schenker``                                             |
++--------------------+-------------------------------------------------------------+
+| ``.carrier_id``    | Carrier's own ID for the pickup point.                      |
++--------------------+-------------------------------------------------------------+
+
+.. warning::
+
+    It's not guaranteed that Logitrail uses the mentioned carrier for the order
+    or shipment. Due this, it's not recommended to show the carrier information
+    to the customer.
  
 Confirming the Order
 ====================
