@@ -41,7 +41,7 @@ Each product in the inbound shipment should be provided in an array of objects i
 | ``qty``          | Quantity of the product items expected to arrive in the shipment.    |
 +------------------+----------------------------------------------------------------------+
 
-Note that existing properties are used to update the product database. You may skip ``name`` and ``ean``
+Note that existing properties are used to update the product database. You may skip ``name`` and ``gtin``
 properties if you are sure that a product with ``merchants_id`` already exists in the database. See
 :doc:`products` for details.
 

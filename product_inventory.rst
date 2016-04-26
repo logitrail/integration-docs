@@ -46,7 +46,7 @@ Requesting Individual Product Inventory (JSON)
 ==============================================
 
 +---------------+--------------------------------------------------------+
-| Endpoint      | ``/product/inventory``                                 |
+| Endpoint      | ``/products/inventory``                                |
 +---------------+--------------------------------------------------------+
 | Method        | POST or GET                                            |
 +---------------+--------------------------------------------------------+
@@ -83,18 +83,14 @@ Requesting Inventory of Multiple Products (JSON)
 Request Parameters
 ------------------
 
+The request parameters might be provided as JSON object in the body (POST request) or
+as the HTTP GET parameters in the query string.
+
+**Requesting by Merchant's own product identifiers**
+
 +-------------------------+---------------------------------------------------------------+
 | ``merchants_id_list[]`` | List of merchant's product identifiers.                       |
 +-------------------------+---------------------------------------------------------------+
-| ``offset``              | Where to start results? (Defaults = 0)                        |
-+-------------------------+---------------------------------------------------------------+
-| ``limit``               | How many results to return? (Defaults/max = 500)              |
-+-------------------------+---------------------------------------------------------------+
-| ``after``               | Return only movements after or at the given time. (ISO 8901)  |
-+-------------------------+---------------------------------------------------------------+
-
-The request parameters might be provided as JSON object in the body (POST request) or
-as the HTTP GET parameters in the query string.
 
 In case you provide the parameters as a JSON object, you should provide ``merchants_id_list``
 as a JSON array.
@@ -104,6 +100,16 @@ as a JSON array.
     {
         "merchants_id_list": ["VAREKSEN_TURKU", "PUIKULA_JALKIUUNI"]
     }
+
+**Requesting by last movements**
+
++-------------------------+---------------------------------------------------------------+
+| ``after``               | Return only movements after or at the given time. (ISO 8901)  |
++-------------------------+---------------------------------------------------------------+
+| ``offset``              | Where to start results? (Defaults = 0)                        |
++-------------------------+---------------------------------------------------------------+
+| ``limit``               | How many results to return? (Defaults/max = 500)              |
++-------------------------+---------------------------------------------------------------+
 
 Response
 --------
@@ -134,11 +140,11 @@ object described below (a single product).
 +-------------------+----------------------------------------------------------------------+
 | ``merchants_id``  | Merchant's Product ID                                                |
 +-------------------+----------------------------------------------------------------------+
-| ``logitrail_id``  | Logitrail's Product ID                                               |
+| ``id``            | Logitrail's Product ID                                               |
 +-------------------+----------------------------------------------------------------------+
 | ``name``          | Product's Name                                                       |
 +-------------------+----------------------------------------------------------------------+
-| ``ean``           | Product's EAN                                                        |
+| ``gtin``          | Product's GTIN (EAN)                                                 |
 +-------------------+----------------------------------------------------------------------+
 | ``inventory``     | Inventory sub-document with quantities.                              |
 +-------------------+----------------------------------------------------------------------+
@@ -171,9 +177,9 @@ Example
 .. code-block:: json
 
     {
-        "logitrail_id": "57fcd113aac87194fedde81d",
+        "id": "57fcd113aac87194fedde81d",
         "merchants_id": "PUIKULA_JALKIUUNI",
-        "name": "Fazer Puikula - Pehme‰mpi j‰lkiuuni",
+        "name": "Fazer Puikula - Pehme√§mpi j√§lkiuuni",
         "ean": "6413466124007",
         "inventory": {
             "inbound": 5,
@@ -200,4 +206,5 @@ Example
 
 In the above example you can see that Logitrail has three (3) items of the product
 in the warehouse. All items are already reserved and no products are available.
-There are five (5) items inbound, i.e. coming within couple of days.
+There are five (5) items inbound, i.e. coming within couple of days. Last
+warehouse movement happened 17th Dec 2015 at 15:09:04 UTC (17:09:04 Finnish time).

@@ -32,7 +32,7 @@ JSON object structure is used.
 | ``tags``             | Array of tags to set to the order.                                   |
 | ``tags_all``         |                                                                      |
 +----------------------+----------------------------------------------------------------------+
-| ``language``         | Language of the order (``fi_FI``)                                    |
+| ``language``         | Language of the order (``fi``, ``en`` or ``sv``)                     |
 +----------------------+----------------------------------------------------------------------+
 
 Customer Details
@@ -85,7 +85,7 @@ Each product in the order should be provided in an array of objects in
 | ``fulfillment_by`` | Possible values are ``merchant`` and ``logitrail`` (default).        |
 +--------------------+----------------------------------------------------------------------+
 
-Note that existing properties are used to update the product database. You may skip ``name`` and ``ean``
+Note that existing properties are used to update the product database. You may skip ``name`` and ``gtin``
 properties if you are sure that a product with ``merchants_id`` already exists in the database. See
 :doc:`products` for details.
 
