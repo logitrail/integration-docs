@@ -36,6 +36,7 @@ Whenever a new identifiable product lot arrives at Logitrail's warehouse,
 a new lot is created for the product. A lot is identified with following
 details of the product:
 
+ * Purchase price of the products (as given in inbound shipment notification)
  * Best Before Date
  * Lot Number
 
