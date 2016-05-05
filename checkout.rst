@@ -1,6 +1,15 @@
 Checkout Integration
 ********************
 
+.. toctree::
+   :maxdepth: 2
+
+   checkout/http_form_api
+   checkout/customizing_layout
+
+Overview
+========
+
 The easiest method to pass customer's order details to Logitrail is to use Logitrail
 Checkout integration in the end of customer's checkout process in the e-commerce store.
 
@@ -23,6 +32,8 @@ The bridge script should be made aware of a couple of details:
 The bridge script should output a hidden HTML form of the details and a calculated
 ``mac`` field to sign the request. The HTML form should be automatically submitted behalf
 of the user.
+
+See :doc:`checkout/http_form_api` for further information about the form and its fields.
 
 Client-side JavaScript
 ======================
