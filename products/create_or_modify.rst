@@ -19,7 +19,7 @@ Request Parameters
 ------------------
 
 The request body should contain a JSON object describing the product.
-See :doc:´/products` for definitions.
+See :doc:`../products` for definitions.
 
 Response
 --------
