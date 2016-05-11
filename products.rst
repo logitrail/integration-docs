@@ -1,6 +1,14 @@
 Product Information
 *******************
 
+.. toctree::
+   :maxdepth: 2
+
+   products/add
+   
+Products Overview
+=================
+
 Logitrail keeps track of basic profile information of each merchant's products.
 The product profiles can be updated during the lifecycle of the product.
 
@@ -26,7 +34,7 @@ should be used.
 | ``weight``              | Weight of the product in grams.                               |
 +-------------------------+---------------------------------------------------------------+
 | ``dimensions``          | Dimensions of the product in millimeters.                     |
-|                         | Property is an array of three elements, i.e. `[30,40,50]`     |
+|                         | Property is an array of three elements, i.e. ``[30,40,50]``   |
 +-------------------------+---------------------------------------------------------------+
 | ``subproducts``         | In case the main product consists of multiple products,       |
 |                         | the subproduct details are given in this subdocument          |
