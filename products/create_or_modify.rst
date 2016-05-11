@@ -21,6 +21,8 @@ Request Parameters
 The request body should contain a JSON object describing the product.
 See :doc:`../products` for definitions.
 
+``merchants_id`` is required in the given JSON.
+
 Response
 --------
 
@@ -32,3 +34,8 @@ Status: **HTTP 200 OK** or **HTTP 201 Created**
 | ``created``      | ``true`` (when a new product is created)                             |
 +------------------+----------------------------------------------------------------------+
 
+Update Product
+==============
+
+Updating a product is done similarly as creating a new product. When ``merchants_id`` already
+exists in the database, the product is updated, otherwise it's created.
