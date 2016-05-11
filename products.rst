@@ -4,7 +4,7 @@ Product Information
 .. toctree::
    :maxdepth: 2
 
-   products/add
+   products/create_or_modify
    
 Products Overview
 =================
