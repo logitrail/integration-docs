@@ -26,7 +26,7 @@ the merchant.
  * **On Hold** is a quantity of items that are currently in Logitrail's
    warehouse but not available for orders or shipments.
 
-All quantities, expect *Inbound*, is provided individually for each product lot,
+All quantities, except *Inbound*, is provided individually for each product lot,
 as well as aggregated as a total for the product (all lots together).
    
 Product Lots
