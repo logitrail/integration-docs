@@ -38,18 +38,12 @@ See :doc:`checkout/http_form_api` for further information about the form and its
 Client-side JavaScript
 ======================
 
-The checkout page should include our client-side JavaScript library in the ``<head>`` section of the page.
+The e-commerce store should include our client-side JavaScript library in the ``<head>`` section of the site.
 
 .. code-block:: html
 
-    <script src="https://rawgit.com/logitrail/javascript-library/master/src/logitrail.js"></script>
+    <script src="https://connect.logitrail.com/logitrail.js"></script>
     
-.. warning::
-
-    The library URL above points to the development version of the library in
-    Logitrail's GitHub repository, served via `RawGit <https://rawgit.com/>`_.
-    Changes are possible and the library might be occassionally in unstable state.
-
 When it's time to pass the order details to Logitrail and allow the customer to make his/her delivery method
 and pickup point selections, you should further do a couple more JavaScript calls with our library.
 
