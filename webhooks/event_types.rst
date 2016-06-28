@@ -15,6 +15,11 @@ Inbound Shipments
 |                                                  | are available for outbound shipments.                          |
 +--------------------------------------------------+----------------------------------------------------------------+
 
+Orders
+=================
+
+See :doc:`orders/webhooks` for further details.
+
 Product Inventory
 =================
 

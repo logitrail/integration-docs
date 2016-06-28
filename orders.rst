@@ -8,3 +8,4 @@ Orders
    orders/confirm
    orders/delete
    orders/statuses
+   orders/webhooks
