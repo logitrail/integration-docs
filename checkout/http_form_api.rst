@@ -62,6 +62,9 @@ of the product (starting from 0) and XXXX is the product field name. Product fie
 +-----------------------+---------------------------------------------------------------------------+
 | ``weight``            | Weight of one item of the product in grams.                               |
 +-----------------------+---------------------------------------------------------------------------+
+| ``dimensions``        | Dimensions of one item of the product in millimeters. Use string format   |
+|                       | ``<width> x <height> x <depth>``, for example ``60 x 30 x 30``.           |
++-----------------------+---------------------------------------------------------------------------+
 | ``price``             | Price of one item of the product, including taxes.                        |
 +-----------------------+---------------------------------------------------------------------------+
 | ``tax``               | Tax percentage of the product.                                            |
