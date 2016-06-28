@@ -79,17 +79,20 @@ Success callback properties
 Logitrail JS API provides a couple of properties back to the success callback. The first and only
 argument is a JS object with following properties.
 
-+--------------------+-------------------------------------------------------------+
-| ``order_id``       | The Logitrail's Order ID                                    |
-+--------------------+-------------------------------------------------------------+
-| ``delivery_fee``   | The delivery fee of the selected payment method and pickup  |
-|                    | point, as defined in the merchant's profile in Logitrail.   |
-|                    | Note that it's not mandatory to set delivery fee prices     |
-|                    | in Logitrail and the merchant may override this.            |
-+--------------------+-------------------------------------------------------------+
-| ``delivery_info``  | An object describing the selected delivery method, see      |
-|                    | "Delivery Info" below.                                      |
-+--------------------+-------------------------------------------------------------+
++-----------------------+----------------------------------------------------------------------------+
+| ``order_id``          | The Logitrail's Order ID                                                   |
++-----------------------+----------------------------------------------------------------------------+
+| ``delivery_fee``      | The delivery fee of the selected payment method and pickup                 |
+|                       | point, as defined in the merchant's profile in Logitrail.                  |
+|                       | Note that it's not mandatory to set delivery fee prices                    |
+|                       | in Logitrail and the merchant may override this.                           |
++-----------------------+----------------------------------------------------------------------------+
+| ``delivery_fee_full`` | Full delivery fee details, example:                                        |
+|                       | ``{ net: 10, tax: 2.40, gross: 12.40, currency: "EUR", tax_percent: 24 }`` |
++-----------------------+----------------------------------------------------------------------------+
+| ``delivery_info``     | An object describing the selected delivery method, see                     |
+|                       | "Delivery Info" below.                                                     |
++-----------------------+----------------------------------------------------------------------------+
 
 Delivery Info
 -------------
