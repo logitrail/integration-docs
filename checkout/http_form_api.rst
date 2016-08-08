@@ -44,6 +44,15 @@ New Order Fields
 |                       | N = index of the product (starting from 0),                               |
 |                       | XXXX = the product field name. See the actual fields below.               |
 +-----------------------+---------------------------------------------------------------------------+
+| ``shipping_fee_mode`` | | Customize the display and handling of shipping fees.                    |
+|                       | | ``hide`` = do not show shipping fees at all                             |
+|                       | | ``exclude_vat`` = show shipping fees excluding VAT                      |
+|                       | | (empty) = show shipping fees including VAT, default                     |
++-----------------------+---------------------------------------------------------------------------+
+| ``tag``               | Add the given tag to the order. Synonym to ``tag_0`` field.               |
++-----------------------+---------------------------------------------------------------------------+
+| ``tags_N``            | Add the given tags to the order. N = index of the tag, starting from 0.   |
++-----------------------+---------------------------------------------------------------------------+
 | ``mac``               | MAC Hash of the request. See MAC calculation below.                       |
 +-----------------------+---------------------------------------------------------------------------+
 
