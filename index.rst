@@ -24,5 +24,6 @@ Contents:
    pickup_points
    products
    product_inventory
+   logitrail_costs
    webhooks
 

@@ -62,3 +62,7 @@ as a JSON object with following properties:
 |                  | not match the carrier and multiple carriers may serve the same       |
 |                  | pickup point.                                                        |
 +------------------+----------------------------------------------------------------------+
+| ``location_info``| Additional information about the pickup point location.              |
++------------------+----------------------------------------------------------------------+
+| ``location_info``| Additional information about the pickup point location.              |
++------------------+----------------------------------------------------------------------+

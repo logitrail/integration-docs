@@ -7,5 +7,6 @@ Orders
    orders/create_or_modify
    orders/confirm
    orders/delete
+   orders/shipping_options
    orders/statuses
    orders/webhooks
