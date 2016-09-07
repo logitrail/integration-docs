@@ -13,4 +13,5 @@ day of the expected arrival date.
    inbound_shipments/statuses
    inbound_shipments/problem
    inbound_shipments/delete
+   inbound_shipments/webhooks
    inbound_shipments/examples

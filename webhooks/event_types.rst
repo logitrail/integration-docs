@@ -4,21 +4,12 @@ Webhook Event Types
 Inbound Shipments
 =================
 
-+--------------------------------------------------+----------------------------------------------------------------+
-| Event Type                                       | Description                                                    |
-+==================================================+================================================================+
-| ``inbound_shipment.arrived_at_warehouse``        | Occurs when an inbound shipment has arrived at the warehouse.  |
-|                                                  | This may not yet mean that the shipment is actually processed  |
-|                                                  | and the items are processed and shippable.                     |
-+--------------------------------------------------+----------------------------------------------------------------+
-| ``inbound_shipment.processed``                   | Occurs when an inbound shipment is processed and items shipped |
-|                                                  | are available for outbound shipments.                          |
-+--------------------------------------------------+----------------------------------------------------------------+
+See :doc:`/inbound_shipments/webhooks`
 
 Orders
 =================
 
-See :doc:`orders/webhooks` for further details.
+See :doc:`/orders/webhooks`
 
 Product Inventory
 =================
