@@ -10,6 +10,8 @@ Order Statuses
 +--------------------------+----------------------------------------------------------+
 | ``confirmed``            | The order is confirmed.                                  |
 +--------------------------+----------------------------------------------------------+
+| ``waiting_products``     | The order is waiting for products to arrive.             |
++--------------------------+----------------------------------------------------------+
 | ``processed``            | The order is shipped to the recipient.                   |
 +--------------------------+----------------------------------------------------------+
 | ``cancelled``            | The order is cancelled (deleted) after confirmation.     |
