@@ -71,6 +71,8 @@ of the product (starting from 0) and XXXX is the product field name. Product fie
 +-----------------------+---------------------------------------------------------------------------+
 | ``weight``            | Weight of one item of the product in grams.                               |
 +-----------------------+---------------------------------------------------------------------------+
+| ``gtin``              | Product's EAN/GTIN                                                        |
++-----------------------+---------------------------------------------------------------------------+
 | ``dimensions``        | Dimensions of one item of the product in millimeters. Use string format   |
 |                       | ``<width> x <height> x <depth>``, for example ``60 x 30 x 30``.           |
 +-----------------------+---------------------------------------------------------------------------+
