@@ -5,6 +5,7 @@ Product Information
    :maxdepth: 2
 
    products/create_or_modify
+   products/subproducts
    
 Products Overview
 =================
@@ -55,25 +56,4 @@ Subproducts
 | (other fields)          | (other fields can be optionally included as in the main product document) |
 +-------------------------+---------------------------------------------------------------------------+
 
-Examples
---------
-
-Let's assume you have a product bundle that includes one book and two magazines. The full
-product document describing the bundle might look like following.
-
-.. code-block:: json
-
-    {
-        "merchants_id": "MAG_BOOK_MAG",
-        "name": "Product Bundle: Vareksen Turku and Two Magazines",
-        "subproducts": [
-            {
-                "merchants_id": "VAREKSEN_TURKU",
-                "amount": 1
-            },
-            {
-                "merchants_id": "SUOMEN_KUVALEHTI",
-                "amount": 2
-            }
-        ]
-    }
+See :doc:`products/subproducts` for detailed information.
