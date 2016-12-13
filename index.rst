@@ -25,6 +25,6 @@ Contents:
    products
    product_inventory
    logitrail_costs
-   shipping_options
+   shipping_methods
    webhooks
 
