@@ -13,7 +13,7 @@ presenting the possible shipping methods.
 | Method        | GET                                                    |
 +---------------+--------------------------------------------------------+
 
-See :doc:`/shipping_methods_delivery_fees` for response format.
+See :doc:`/shipping_methods/query` for response format.
 
 Modifying the Shipping Method
 =============================

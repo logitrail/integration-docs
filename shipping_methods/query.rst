@@ -1,5 +1,5 @@
-Shipping Methods and Delivery Fees
-**********************************
+Querying Shipping Methods and Delivery Fees
+*******************************************
 
 Logitrail provides a couple of different shipping methods that can be selected when creating an order.
 
@@ -81,7 +81,9 @@ The price information is given in JSON format.
 +------------------+----------------------------------------------------------------------+
 
 Note: Logitrail does not charge customers directly. Instead it's up to the merchant to define the pricing model
-and pass the information to the payment gateway / invoicing. Pricing rules can be defined in the merchant portal.
+and pass the information to the payment gateway / invoicing.
+
+Pricing rules can be defined in the merchant portal. Read more about :doc:`rules`.
 
 Example
 -------
