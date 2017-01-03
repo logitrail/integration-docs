@@ -54,6 +54,7 @@ New Order Fields
 | ``tags_N``            | Add the given tags to the order. N = index of the tag, starting from 0.   |
 +-----------------------+---------------------------------------------------------------------------+
 | ``pricelist``         | Force checkout to use the given shipping fee price list.                  |
+|                       | See :doc:`/shipping_methods/rules`                                        |
 +-----------------------+---------------------------------------------------------------------------+
 | ``mac``               | MAC Hash of the request. See MAC calculation below.                       |
 +-----------------------+---------------------------------------------------------------------------+
