@@ -38,7 +38,7 @@ New Order Fields
 | ``layout``            | A custom layout to be used in the checkout. A layout consists of custom   |
 |                       | theme files, like custom CSS.                                             |
 +-----------------------+---------------------------------------------------------------------------+
-| ``language``          | Language to be used in the checkout process. Defaults to ``fi``           |
+| ``language``          | Language to be used in the checkout process in ``ISO 639-1`` format.      |
 +-----------------------+---------------------------------------------------------------------------+
 | ``products_N_XXXX``   | Product details for the order are given in separate repeating fields.     |
 |                       | N = index of the product (starting from 0),                               |
