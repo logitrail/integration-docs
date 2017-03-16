@@ -6,6 +6,7 @@ Checkout Integration
 
    checkout/http_form_api
    checkout/customizing_layout
+   checkout/embed_shipping_fee_widget
 
 Overview
 ========
