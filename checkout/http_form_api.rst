@@ -56,6 +56,9 @@ New Order Fields
 | ``pricelist``         | Force checkout to use the given shipping fee price list.                  |
 |                       | See :doc:`/shipping_methods/rules`                                        |
 +-----------------------+---------------------------------------------------------------------------+
+| ``total_sum``         | Total sum of the order. This value, if set, overrides the item-by-item    |
+|                       | calculated total sum. Optional.                                           |
++-----------------------+---------------------------------------------------------------------------+
 | ``mac``               | MAC Hash of the request. See MAC calculation below.                       |
 +-----------------------+---------------------------------------------------------------------------+
 
@@ -86,6 +89,9 @@ of the product (starting from 0) and XXXX is the product field name. Product fie
 
 Only fields ``_id`` and ``_amount`` are required if the product is known to Logitrail before. It's recommended
 to pass all information anyway.
+
+Note that ``price`` is optional and it's possible that you provide ``total_sum`` parameter for the whole order
+instead of individual products.
 
 MAC Calculation
 ---------------
