@@ -8,5 +8,6 @@ Orders
    orders/confirm
    orders/delete
    orders/shipping_options
+   orders/best_before_dates
    orders/statuses
    orders/webhooks

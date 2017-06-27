@@ -87,6 +87,9 @@ Each product in the order should be provided in an array of objects in
 +--------------------+----------------------------------------------------------------------+
 | ``fulfillment_by`` | Possible values are ``merchant`` and ``logitrail`` (default).        |
 +--------------------+----------------------------------------------------------------------+
+| ``best_before``    | Best before date restriction for the products that should be sent to |
+|                    | the customer. See :doc:`best_before_dates`.                          |
++--------------------+----------------------------------------------------------------------+
 
 Note that existing properties are used to update the product database. You may skip ``name`` and ``gtin``
 properties if you are sure that a product with ``merchants_id`` already exists in the database. See

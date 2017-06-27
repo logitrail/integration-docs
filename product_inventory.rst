@@ -138,42 +138,51 @@ Product Inventory JSON Object
 When product inventory information is requested, Logitrail provides the info as a JSON
 object described below (a single product).
 
-+-------------------+----------------------------------------------------------------------+
-| ``merchants_id``  | Merchant's Product ID                                                |
-+-------------------+----------------------------------------------------------------------+
-| ``id``            | Logitrail's Product ID                                               |
-+-------------------+----------------------------------------------------------------------+
-| ``name``          | Product's Name                                                       |
-+-------------------+----------------------------------------------------------------------+
-| ``gtin``          | Product's GTIN (EAN)                                                 |
-+-------------------+----------------------------------------------------------------------+
-| ``inventory``     | Inventory sub-document with quantities.                              |
-+-------------------+----------------------------------------------------------------------+
-| ``.inbound``      | Inbound quantity                                                     |
-+-------------------+----------------------------------------------------------------------+
-| ``.in_stock``     | In Stock quantity                                                    |
-+-------------------+----------------------------------------------------------------------+
-| ``.available``    | Available quantity                                                   |
-+-------------------+----------------------------------------------------------------------+
-| ``.reserved``     | Reserved quantity                                                    |
-+-------------------+----------------------------------------------------------------------+
-| ``.on_hold``      | On Hold quantity                                                     |
-+-------------------+----------------------------------------------------------------------+
-| ``.last_movement``| Timestamp of the last movement/update in the quantities (ISO 8601)   |
-+-------------------+----------------------------------------------------------------------+
-| ``lots``          | If there are product lots for the product, lot information is given  |
-|                   | in this property as sub-document hash. Keys are Logitrail's internal |
-|                   | identifications for the lot.                                         |
-+-------------------+----------------------------------------------------------------------+
-| ``.lot_number``   | Lot Number (as given in the product items)                           |
-+-------------------+----------------------------------------------------------------------+
-| ``.best_before``  | Best Before Date (in format yyyy-mm-dd)                              |
-+-------------------+----------------------------------------------------------------------+
-| ``.inventory``    | Inventory quantities in the same format as in the parent document.   |
-+-------------------+----------------------------------------------------------------------+
++----------------------+----------------------------------------------------------------------+
+| ``merchants_id``     | Merchant's Product ID                                                |
++----------------------+----------------------------------------------------------------------+
+| ``id``               | Logitrail's Product ID                                               |
++----------------------+----------------------------------------------------------------------+
+| ``name``             | Product's Name                                                       |
++----------------------+----------------------------------------------------------------------+
+| ``gtin``             | Product's GTIN (EAN)                                                 |
++----------------------+----------------------------------------------------------------------+
+| ``inventory``        | Inventory sub-document with quantities.                              |
++----------------------+----------------------------------------------------------------------+
+| ``.inbound``         | Inbound quantity                                                     |
++----------------------+----------------------------------------------------------------------+
+| ``.in_stock``        | In Stock quantity                                                    |
++----------------------+----------------------------------------------------------------------+
+| ``.available``       | Available quantity                                                   |
++----------------------+----------------------------------------------------------------------+
+| ``.reserved``        | Reserved quantity                                                    |
++----------------------+----------------------------------------------------------------------+
+| ``.on_hold``         | On Hold quantity                                                     |
++----------------------+----------------------------------------------------------------------+
+| ``.last_movement``   | Timestamp of the last movement/update in the quantities (ISO 8601)   |
++----------------------+----------------------------------------------------------------------+
+| ``.best_before``     | Earliest available best before date, if applicable. See              |
+|                      | :ref:`Best Before Dates <best_before_dates>` below.                  |
++----------------------+----------------------------------------------------------------------+
+| ``.availability_by`` | Grouped available/reserved quantities.                               |
+|                      | Contains currently only only ``best_before_dates``.                  |
++----------------------+----------------------------------------------------------------------+
+
+.. _best_before_dates:
+
+Best Before Dates
+=================
+
+Logitrail tracks the best before dates (also known as expiration dates) of the product articles
+in the inventory. This information is communicated to the merchant in the inventory document.
+
+``best_before`` field contains information about **the earliest available** best before date.
+
+``availability_by.best_before_dates`` object contains details about availability by a certain
+product lot.
 
 Example
--------
+=======
 
 .. code-block:: json
 
@@ -184,28 +193,33 @@ Example
         "ean": "6413466124007",
         "inventory": {
             "inbound": 5,
-            "in_stock": 3,
-            "available": 0,
+            "in_stock": 8,
+            "available": 5,
             "reserved": 3,
             "on_hold": 0,
-            "last_movement": "2015-12-17T15:09:04+00:00",
-        },
-        "lots": {
-            "57fcd113aac87194faade89c": {
-                "best_before": "2015-12-19",
-                "inventory": {
-                    "inbound": 5,
-                    "in_stock": 3,
-                    "available": 0,
-                    "reserved": 3,
-                    "on_hold": 0,
-                    "last_movement": "2015-12-17T15:09:04+00:00",
+            "last_movement": "2017-06-26T15:09:04+00:00",
+            "best_before": "2017-08-02",
+            "availability_by": {
+                "best_before_dates": {
+                    "2017-08-02": {
+                        "available": 2,
+                        "reserved": 2
+                    },
+                    "2017-12-19": {
+                        "available": 3,
+                        "reserved": 1
+                    },
                 }
             }
         }
     }
 
-In the above example you can see that Logitrail has three (3) items of the product
-in the warehouse. All items are already reserved and no products are available.
+In the above example you can see that Logitrail has three (8) items of the product
+in the warehouse. Three (3) of the items are reserved, while five (5) are yet available
+for new orders.
+
+The earliest available best before date is 2nd Aug 2017. In the warehouse, there are also
+items with best before date 19th Dec 2017.
+
 There are five (5) items inbound, i.e. coming within couple of days. Last
-warehouse movement happened 17th Dec 2015 at 15:09:04 UTC (17:09:04 Finnish time).
+warehouse movement happened 26th Jun 2017 at 15:09:04 UTC (18:09:04 Finnish time).
