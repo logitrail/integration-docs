@@ -90,6 +90,11 @@ Each product in the order should be provided in an array of objects in
 | ``best_before``    | Best before date restriction for the products that should be sent to |
 |                    | the customer. See :doc:`best_before_dates`.                          |
 +--------------------+----------------------------------------------------------------------+
+| ``weight``         | Weight of the product (in grams)                                     |
++--------------------+----------------------------------------------------------------------+
+| ``dimensions``     | Dimensions of the product (in millimeters), given as a string        |
+|                    | ``"W x H x D"`` or an array ``[w, h, d]``                            |
++--------------------+----------------------------------------------------------------------+
 
 Note that existing properties are used to update the product database. You may skip ``name`` and ``gtin``
 properties if you are sure that a product with ``merchants_id`` already exists in the database. See
