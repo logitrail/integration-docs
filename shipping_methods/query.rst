@@ -13,7 +13,7 @@ Requesting Possible Shipping Methods
 Logitrail API provides two endpoints to request the possible shipping methods.
 
   * ``GET /shipping_options`` is a generic endpoint to request shipping options, pickup points and delivery fees
-  * ``GET /order/{id}/shipping_options`` returns shipping options for the given order.
+  * ``GET /orders/{id}/shipping_options`` returns shipping options for the given order.
 
 Query Available Shipping Methods
 ================================
