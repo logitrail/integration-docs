@@ -9,6 +9,7 @@ day of the expected arrival date.
    :maxdepth: 2
 
    inbound_shipments/create_or_modify
+   inbound_shipments/confirm
    inbound_shipments/get
    inbound_shipments/statuses
    inbound_shipments/problem
