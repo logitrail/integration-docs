@@ -7,7 +7,7 @@ an e-commerce platform to Logitrail's systems.
 
 .. warning::
 
-    This documentation is under construction. Please coordinate with
+    This documentation is under construction! Please coordinate with
     Logitrail Technology Staff if you intend to use API functionality to confirm
     the latest information.
 
