@@ -2,11 +2,6 @@ Pickup Point Lookup
 *******************
 
 Logitrail provides a direct API access to its pickup point directory.
-
-.. warning::
-
-    It's not recommended to do queries to the Pickup Point API when the customer
-    is checking out. Use our Checkout Service (see :doc:`checkout`) instead.
     
 .. warning::
 
