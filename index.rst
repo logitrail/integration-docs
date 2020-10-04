@@ -18,7 +18,6 @@ Contents:
 
    intro
    test_environment
-   checkout
    inbound_shipments
    orders
    pickup_points
