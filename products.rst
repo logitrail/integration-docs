@@ -44,6 +44,9 @@ should be used.
 | ``fulfillment_by``      | The party who is responsible for fulfilling the orders.       |
 |                         | Possible values are ``merchant`` and ``logitrail`` (default). |
 +-------------------------+---------------------------------------------------------------+
+| ``taric_code``          | 10-digit TARIC Code of the product. See                       |
+|                         | https://en.wikipedia.org/wiki/TARIC_code                      |
++-------------------------+---------------------------------------------------------------+
 
 Subproducts
 -----------

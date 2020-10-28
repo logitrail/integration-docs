@@ -37,6 +37,8 @@ JSON object structure is used.
 | ``pricelist``        | Apply the specified pricelist for the order.                         |
 |                      | See :doc:`/shipping_methods/rules`                                   |
 +----------------------+----------------------------------------------------------------------+
+| ``currency``         | Currency code (default `EUR`)                                        |
++----------------------+----------------------------------------------------------------------+
 
 Customer Details
 ----------------
@@ -77,13 +79,18 @@ Each product in the order should be provided in an array of objects in
 ``products`` or ``products_all`` properties.
 
 +--------------------+----------------------------------------------------------------------+
-| ``name``           | Name of the product                                                  |
+| ``qty``            | Quantity of the product items ordered. (required)                    |
 +--------------------+----------------------------------------------------------------------+
-| ``merchants_id``   | Merchant's ID of the product.                                        |
+| ``merchants_id``   | Merchant's ID of the product. (required)                             |
++--------------------+----------------------------------------------------------------------+
+| ``unit_price``     | Unit price of the order item. Note: Price is not updated to          |
+|                    | the product profile, it must be given in each order item separately. |
++--------------------+----------------------------------------------------------------------+
+| ``tax_percent``    | Tax percentage. Note: not updated to the product profile.            |
++--------------------+----------------------------------------------------------------------+
+| ``name``           | Name of the product.  (required if not existing product)             |
 +--------------------+----------------------------------------------------------------------+
 | ``gtin``           | EAN (GTIN) barcode of the product.                                   |
-+--------------------+----------------------------------------------------------------------+
-| ``qty``            | Quantity of the product items expected to arrive in the shipment.    |
 +--------------------+----------------------------------------------------------------------+
 | ``fulfillment_by`` | Possible values are ``merchant`` and ``logitrail`` (default).        |
 +--------------------+----------------------------------------------------------------------+
@@ -95,10 +102,16 @@ Each product in the order should be provided in an array of objects in
 | ``dimensions``     | Dimensions of the product (in millimeters), given as a string        |
 |                    | ``"W x H x D"`` or an array ``[w, h, d]``                            |
 +--------------------+----------------------------------------------------------------------+
+| ``taric_code``     | 10-digit TARIC Code of the product. See                              |
+|                    | https://en.wikipedia.org/wiki/TARIC_code                             |
++--------------------+----------------------------------------------------------------------+
 
-Note that existing properties are used to update the product database. You may skip ``name`` and ``gtin``
+Note that given properties are used to update the product database. You may skip ``name`` and ``gtin``
 properties if you are sure that a product with ``merchants_id`` already exists in the database. See
 :doc:`products` for details.
+
+`currency`, `unit_price` and `tax_percent` are persisted only each order item and NOT updated
+to the product database.
 
 Destinations   
 ------------
