@@ -69,6 +69,10 @@ Customer details are used in multiple phases of the order fulfillment process:
 +----------------------+----------------------------------------------------------------------+
 | ``phoneNumber``      | Customer's phone number in international format.                     |
 +----------------------+----------------------------------------------------------------------+
+| ``eori``             | Customer's EORI Number.                                              |
++----------------------+----------------------------------------------------------------------+
+| ``vat_id``           | Customer's VAT ID                                                    |
++----------------------+----------------------------------------------------------------------+
 
 (*) = Required field.
 
@@ -78,33 +82,36 @@ Product Details
 Each product in the order should be provided in an array of objects in
 ``products`` or ``products_all`` properties.
 
-+--------------------+----------------------------------------------------------------------+
-| ``qty``            | Quantity of the product items ordered. (required)                    |
-+--------------------+----------------------------------------------------------------------+
-| ``merchants_id``   | Merchant's ID of the product. (required)                             |
-+--------------------+----------------------------------------------------------------------+
-| ``unit_price``     | Unit price of the order item. Note: Price is not updated to          |
-|                    | the product profile, it must be given in each order item separately. |
-+--------------------+----------------------------------------------------------------------+
-| ``tax_percent``    | Tax percentage. Note: not updated to the product profile.            |
-+--------------------+----------------------------------------------------------------------+
-| ``name``           | Name of the product.  (required if not existing product)             |
-+--------------------+----------------------------------------------------------------------+
-| ``gtin``           | EAN (GTIN) barcode of the product.                                   |
-+--------------------+----------------------------------------------------------------------+
-| ``fulfillment_by`` | Possible values are ``merchant`` and ``logitrail`` (default).        |
-+--------------------+----------------------------------------------------------------------+
-| ``best_before``    | Best before date restriction for the products that should be sent to |
-|                    | the customer. See :doc:`best_before_dates`.                          |
-+--------------------+----------------------------------------------------------------------+
-| ``weight``         | Weight of the product (in grams)                                     |
-+--------------------+----------------------------------------------------------------------+
-| ``dimensions``     | Dimensions of the product (in millimeters), given as a string        |
-|                    | ``"W x H x D"`` or an array ``[w, h, d]``                            |
-+--------------------+----------------------------------------------------------------------+
-| ``taric_code``     | 10-digit TARIC Code of the product. See                              |
-|                    | https://en.wikipedia.org/wiki/TARIC_code                             |
-+--------------------+----------------------------------------------------------------------+
++---------------------------+----------------------------------------------------------------------+
+| ``qty``                   | Quantity of the product items ordered. (required)                    |
++---------------------------+----------------------------------------------------------------------+
+| ``merchants_id``          | Merchant's ID of the product. (required)                             |
++---------------------------+----------------------------------------------------------------------+
+| ``unit_price``            | Unit price of the order item. Note: Price is not updated to          |
+|                           | the product profile, it must be given in each order item separately. |
++---------------------------+----------------------------------------------------------------------+
+| ``tax_percent``           | Tax percentage. Note: not updated to the product profile.            |
++---------------------------+----------------------------------------------------------------------+
+| ``name``                  | Name of the product.  (required if not existing product)             |
++---------------------------+----------------------------------------------------------------------+
+| ``gtin``                  | EAN (GTIN) barcode of the product.                                   |
++---------------------------+----------------------------------------------------------------------+
+| ``fulfillment_by``        | Possible values are ``merchant`` and ``logitrail`` (default).        |
++---------------------------+----------------------------------------------------------------------+
+| ``best_before``           | Best before date restriction for the products that should be sent to |
+|                           | the customer. See :doc:`best_before_dates`.                          |
++---------------------------+----------------------------------------------------------------------+
+| ``weight``                | Weight of the product (in grams)                                     |
++---------------------------+----------------------------------------------------------------------+
+| ``dimensions``            | Dimensions of the product (in millimeters), given as a string        |
+|                           | ``"W x H x D"`` or an array ``[w, h, d]``                            |
++---------------------------+----------------------------------------------------------------------+
+| ``taric_code``            | 10-digit TARIC Code of the product. See                              |
+|                           | https://en.wikipedia.org/wiki/TARIC_code                             |
++---------------------------+----------------------------------------------------------------------+
+| ``manufacturing_country`` | Manufacturing Country of the product. See                            |
+|                           | https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2                     |
++---------------------------+----------------------------------------------------------------------+
 
 Note that given properties are used to update the product database. You may skip ``name`` and ``gtin``
 properties if you are sure that a product with ``merchants_id`` already exists in the database. See

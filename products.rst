@@ -25,28 +25,31 @@ JSON Product Document
 When requesting or updating product details, the following JSON object structure
 should be used.
 
-+-------------------------+---------------------------------------------------------------+
-| ``merchants_id``        | Merchant's own product id - should be unique. (required)      |
-+-------------------------+---------------------------------------------------------------+
-| ``name``                | Name of the product (as visible to the customers)             |
-+-------------------------+---------------------------------------------------------------+
-| ``gtin``                | Barcode (GTIN/EAN)                                            |
-+-------------------------+---------------------------------------------------------------+
-| ``weight``              | Weight of the product in grams.                               |
-+-------------------------+---------------------------------------------------------------+
-| ``dimensions``          | Dimensions of the product in millimeters.                     |
-|                         | Property is an array of three elements, i.e. ``[30,40,50]``   |
-+-------------------------+---------------------------------------------------------------+
-| ``subproducts``         | In case the main product consists of multiple products,       |
-|                         | the subproduct details are given in this subdocument          |
-|                         | as an array.                                                  |
-+-------------------------+---------------------------------------------------------------+
-| ``fulfillment_by``      | The party who is responsible for fulfilling the orders.       |
-|                         | Possible values are ``merchant`` and ``logitrail`` (default). |
-+-------------------------+---------------------------------------------------------------+
-| ``taric_code``          | 10-digit TARIC Code of the product. See                       |
-|                         | https://en.wikipedia.org/wiki/TARIC_code                      |
-+-------------------------+---------------------------------------------------------------+
++---------------------------+---------------------------------------------------------------+
+| ``merchants_id``          | Merchant's own product id - should be unique. (required)      |
++---------------------------+---------------------------------------------------------------+
+| ``name``                  | Name of the product (as visible to the customers)             |
++---------------------------+---------------------------------------------------------------+
+| ``gtin``                  | Barcode (GTIN/EAN)                                            |
++---------------------------+---------------------------------------------------------------+
+| ``weight``                | Weight of the product in grams.                               |
++---------------------------+---------------------------------------------------------------+
+| ``dimensions``            | Dimensions of the product in millimeters.                     |
+|                           | Property is an array of three elements, i.e. ``[30,40,50]``   |
++---------------------------+---------------------------------------------------------------+
+| ``subproducts``           | In case the main product consists of multiple products,       |
+|                           | the subproduct details are given in this subdocument          |
+|                           | as an array.                                                  |
++---------------------------+---------------------------------------------------------------+
+| ``fulfillment_by``        | The party who is responsible for fulfilling the orders.       |
+|                           | Possible values are ``merchant`` and ``logitrail`` (default). |
++---------------------------+---------------------------------------------------------------+
+| ``taric_code``            | 10-digit TARIC Code of the product. See                       |
+|                           | https://en.wikipedia.org/wiki/TARIC_code                      |
++---------------------------+---------------------------------------------------------------+
+| ``manufacturing_country`` | Manufacturing Country of the product. See                     |
+|                           | https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2              |
++---------------------------+---------------------------------------------------------------+
 
 Subproducts
 -----------
