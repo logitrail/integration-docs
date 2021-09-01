@@ -11,3 +11,4 @@ Orders
    orders/best_before_dates
    orders/statuses
    orders/webhooks
+   orders/returns
