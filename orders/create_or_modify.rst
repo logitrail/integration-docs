@@ -112,6 +112,8 @@ Each product in the order should be provided in an array of objects in
 | ``manufacturing_country`` | Manufacturing Country of the product. See                            |
 |                           | https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2                     |
 +---------------------------+----------------------------------------------------------------------+
+| ``additional_info``       | Free text information about the line item.                           |
++---------------------------+----------------------------------------------------------------------+
 
 Note that given properties are used to update the product database. You may skip ``name`` and ``gtin``
 properties if you are sure that a product with ``merchants_id`` already exists in the database. See
