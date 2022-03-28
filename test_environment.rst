@@ -26,9 +26,8 @@ URLs
 In general, test environment URLs are identical to production URLs but only the hostname is
 different and points to the test servers.
 
-**API Test Server**: ``https://api-1.test.logitrail.com/``
-**Merchant Portal**: ``https://my.test.logitrail.com``
-**Checkout Service**: ``https://checkout.test.logitrail.com``
+**API Test Server**: ``https://api-1.test.logitrail.com/2015-01-01/``
+**Merchant Portal**: ``https://merchants.test.logitrail.com``
  
 From Test to Production
 =======================
