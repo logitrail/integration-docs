@@ -25,4 +25,4 @@ Contents:
    product_inventory
    shipping_methods
    webhooks
-
+   errors

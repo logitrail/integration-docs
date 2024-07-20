@@ -204,3 +204,27 @@ Confirm Order
 ============
 
 A created order **must** be confirmed with a separate API call. See :doc:`confirm`.
+
+Error Responses
+===============
+
+See :doc:`/errors` for generic documentation regarding error responses.
+
+``code`` values
+---------------
+
++---------------------------------------+-----------+-----------------------------------------------------------------------------------------------+
+| Code                                  | HTTP Code | Reason + how to fix                                                                           |
++---------------------------------------+-----------+-----------------------------------------------------------------------------------------------+
+| ``order_not_passive``                 |           | The order is requested to be confirmed (``status`` in modification/creation request)          |
+|                                       |           | but the order is already confirmed or in another status but ``passive``.                      |
++---------------------------------------+-----------+-----------------------------------------------------------------------------------------------+
+| ``product.merchants_id.required``     | 400       | ``products`` or ``products_all` item does not include ``merchants_id`` or it is empty.        |
+|                                       |           | Every product must have merchants_id (SKU).                                                   |
++---------------------------------------+-----------+-----------------------------------------------------------------------------------------------+
+| ``item_source_id_missing``            | 400       | At least one product item contains ``source_id`` field, but there is also an item without it. |
+|                                       |           | If you use ``source_id`` in product item lines, add it to every item.                         |
++---------------------------------------+-----------+-----------------------------------------------------------------------------------------------+
+| ``item_source_id_missing``            | 400       | At least one product item contains ``source_id`` field, but there is also an item without it. |
+|                                       |           | If you use ``source_id`` in product item lines, add it to every item.                         |
++---------------------------------------+-----------+-----------------------------------------------------------------------------------------------+
